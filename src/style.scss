@@ -8,6 +8,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s;
 
     &:hover {
         background-color: #cdd1ff;
@@ -104,15 +105,54 @@ body {
 .todo-item {
     padding: 5px 10px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     list-style: none;
     background-color: #e1ebff;
     border-radius: 5px;
     overflow-wrap: break-word;
 
+    &--done {
+        text-decoration: line-through;
+        text-decoration-color: #42ac59;
+        text-decoration-thickness: percentage($number: 0.15);
+    }
+
+    // .todo-item__btn-done
+    &__btn-done {
+        @include btn();
+        width: 20px;
+        height: 20px;
+        border: 1px solid #7878e6;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        // .todo-item:hover .todo-item__btn-done
+        // .todo-item--done .todo-item__btn-done
+        .todo-item:hover &,
+        .todo-item--done > & {
+            background-image: url("./image/btn-done.png");
+        }
+
+        // .todo-item__btn-done:hover,
+        &:hover {
+            background-size: contain;
+        }
+    }
+
+    // .todo-item__name
+    &__name {
+        margin: 0 auto 0 10px;
+    }
+
     // .todo-item__btn-del
     &__btn-del {
         @include btn();
-        background-image: url("./image/del.svg");
+        background-image: url("./image/btn-del.svg");
+        opacity: 0;
+
+        // .todo-item:hover .todo-item__btn-del
+        .todo-item:hover & {
+            opacity: 1;
+        }
     }
 }
