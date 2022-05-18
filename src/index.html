@@ -7,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>Todo App</title>
 </head>
 
 <body>
     <div class="todo">
         <h1 class="todo__title">Todo List</h1>
-        <form action="#" class="todo__form todo-form">
-            <input type="text" class="todo-form__input" placeholder="Add your new todo">
-            <button type="submit" class="todo-form__btn">+</button>
+        <form action="#" class="todo__form todo-form" data-todo="form">
+            <input type="text" class="todo-form__input" data-todo="input" placeholder="Add your new todo" required>
+            <button type="submit" class="todo-form__btn" data-todo="btn-add-item">+</button>
         </form>
-        <ul class="todo__list todo-list" data-todo="todo-list"></ul>
+        <ul class="todo__list todo-list" data-todo="list"></ul>
     </div>
 </body>
 

@@ -6,13 +6,14 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Caveat", cursive;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: normal;
+    font-style: italic;
     background: linear-gradient(0, rgba(2, 0, 36, 1) 0%, rgba(120, 120, 230, 1) 0%, rgba(5, 198, 237, 1) 45%);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -20,7 +21,8 @@ body {
 }
 
 .todo {
-    min-width: 400px;
+    width: 100%;
+    max-width: 400px;
     padding: 20px 30px;
     display: flex;
     flex-direction: column;
@@ -29,24 +31,30 @@ body {
     border: 2px solid #7878e6;
     border-radius: 10px;
 
+    // .todo__title
+
+    &__title {
+        font-family: "Caveat", cursive;
+        font-style: normal;
+    }
+
     // .todo__form
 
     &__form {
-        width: 100%;
         margin: 20px 0;
-        display: flex;
-        justify-content: space-between;
     }
 }
 
 .todo-form {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
 
     // .todo-form__input
 
     &__input {
         min-width: 90%;
-        padding: 2px 5px;
+        padding: 5px;
     }
 
     // .todo-form__btn
@@ -54,6 +62,7 @@ body {
     &__btn {
         width: 30px;
         height: 30px;
+        cursor: pointer;
     }
 }
 
@@ -61,4 +70,14 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    // .todo-list__item
+
+    &__item {
+        margin: 5px 0;
+        padding: 5px 10px;
+        list-style: none;
+        background-color: #e1ebff;
+        border-radius: 5px;
+    }
 }
