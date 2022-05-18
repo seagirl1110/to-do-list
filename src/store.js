@@ -13,4 +13,12 @@ const todoColl = [
     },
 ];
 
-export default todoColl
+const addTodoItem = (item) => {
+    todoColl.push(item);
+}
+
+const delTodoItem = (index) => {
+    todoColl.splice(index, 1);
+}
+
+export {todoColl, addTodoItem, delTodoItem}

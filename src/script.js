@@ -1,7 +1,6 @@
 import './style.scss';
-import todoColl from './todoColl';
+import { todoColl, addTodoItem } from './store';
 import { renderTodoList } from './renderTodoList';
-import { addTodoItem } from './addTodoItem'
 
 const form = document.querySelector('[data-todo="form"]');
 form.addEventListener('submit', (evt) => {
@@ -17,7 +16,7 @@ btnAdd.addEventListener('click', () => {
         name: input.value,
         status: 'active',
     }
-    addTodoItem(todoColl, item);
+    addTodoItem(item);
     input.value = '';
     renderTodoList(todoColl, todoList)
 });
