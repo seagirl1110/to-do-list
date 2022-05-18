@@ -1,16 +1,5 @@
-import todoColl from "./todoColl";
-import { todoList } from "./script";
-import { renderTodoList } from "./renderTodoList";
-
-function addTodoItem(input) {
-    if (!input.value.length) { return }
-    const item = {
-        name: input.value,
-        status: 'active',
-    }
-    todoColl.push(item);
-    renderTodoList(todoColl, todoList);
-    input.value = '';
+function addTodoItem(coll, item) {
+    coll.push(item);
 }
 
-export {addTodoItem}
+export { addTodoItem }
