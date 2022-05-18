@@ -109,7 +109,6 @@ body {
     list-style: none;
     background-color: #e1ebff;
     border-radius: 5px;
-    overflow-wrap: break-word;
 
     &--done {
         text-decoration: line-through;
@@ -141,7 +140,9 @@ body {
 
     // .todo-item__name
     &__name {
+        max-width: 250px;
         margin: 0 auto 0 10px;
+        overflow-wrap: break-word;
     }
 
     // .todo-item__btn-del
