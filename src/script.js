@@ -8,6 +8,13 @@ form.addEventListener('submit', (evt) => {
 })
 
 const input = form.querySelector('[data-todo="input"]');
+input.focus();
+
+document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Enter') {
+        input.focus();
+    }
+})
 
 const btnAdd = form.querySelector('[data-todo="btn-add-item"]');
 btnAdd.addEventListener('click', () => {
@@ -24,4 +31,4 @@ btnAdd.addEventListener('click', () => {
 const todoList = document.querySelector('[data-todo="list"]');
 renderTodoList(todoColl, todoList);
 
-export {todoList}
+export { todoList }

@@ -68,10 +68,16 @@ body {
     // .todo-form__input
     &__input {
         min-width: 90%;
-        padding: 5px;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-style: italic;
         border: 1px solid #23092c;
         border-radius: 5px;
         outline: none;
+
+        &::placeholder {
+            font-size: 14px;
+        }
     }
 
     // .todo-form__btn-add
