@@ -13,8 +13,17 @@ const todoColl = JSON.parse(localStorage.getItem('todo')) || [
     },
 ];
 
+const sortTodoColl = () => {
+    todoColl.sort((a, b) => {
+        if (a.status === 'active' && b.status === 'done') {
+            return -1;
+        }
+    })
+}
+
 const addTodoItem = (item) => {
     todoColl.push(item);
+    sortTodoColl();
     localStorage.setItem('todo', JSON.stringify(todoColl))
 }
 
@@ -24,7 +33,7 @@ const doneTodoItem = (index) => {
     } else {
         todoColl[index].status = 'active';
     }
-
+    sortTodoColl();
     localStorage.setItem('todo', JSON.stringify(todoColl))
 }
 
