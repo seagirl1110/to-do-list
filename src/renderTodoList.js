@@ -4,7 +4,7 @@ function renderTodoList(coll, list) {
     list.innerHTML = '';
     coll.forEach((element, index) => {
         const item = document.createElement('li');
-        item.classList.add('todo-list__item', 'todo-item', `todo-item--${element.status}`);
+        item.classList.add('todo-list__item', 'todo-item', `todo-item--${element.status}`, `todo-item--${element.priority}`);
         item.innerHTML = `<span class="todo-item__name">${element.name}</span>`
 
         const btnDone = document.createElement('button');

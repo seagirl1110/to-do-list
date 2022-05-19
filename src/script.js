@@ -16,12 +16,27 @@ document.addEventListener('keydown', (evt) => {
     }
 })
 
+const btnPriority = form.querySelector('[data-todo="priority"]');
+const btnPriorityCheckbox = btnPriority.querySelector('[data-todo="priority-checkbox"]');
+btnPriorityCheckbox.addEventListener('change', () => {
+    if (btnPriorityCheckbox.checked) {
+        btnPriority.classList.add('todo-form__priority--important');
+    } else {
+        btnPriority.classList.remove('todo-form__priority--important');
+    }
+});
+
 const btnAdd = form.querySelector('[data-todo="btn-add-item"]');
 btnAdd.addEventListener('click', () => {
-    if (!input.value.length) { return }
+    if (!input.value.length) { return };
+    let priority = 'common';
+    if (btnPriorityCheckbox.checked) {
+        priority = 'important';
+    }
     const item = {
         name: input.value,
         status: 'active',
+        priority: priority,
     }
     addTodoItem(item);
     input.value = '';

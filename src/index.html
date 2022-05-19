@@ -18,6 +18,10 @@
         <h1 class="todo__title">Todo List</h1>
         <form action="#" class="todo__form todo-form" data-todo="form">
             <input type="text" class="todo-form__input" data-todo="input" placeholder="Add your new todo" required>
+            <label class="todo-form__priority" data-todo="priority">
+                <input type="checkbox" class="todo-form__priority--checkbox" data-todo="priority-checkbox">
+                important task
+            </label>
             <button type="submit" class="todo-form__btn-add" data-todo="btn-add-item">+</button>
         </form>
         <ul class="todo__list todo-list" data-todo="list"></ul>
