@@ -57,7 +57,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "doneTodoItem": () => (/* binding */ doneTodoItem),
 /* harmony export */   "todoColl": () => (/* binding */ todoColl)
 /* harmony export */ });
-const todoColl = JSON.parse(localStorage.getItem('todo'));
+const todoColl = JSON.parse(localStorage.getItem('todo')) || [];
 
 const sortTodoColl = () => {
   todoColl.sort((a, b) => {
@@ -889,4 +889,4 @@ btnAdd.addEventListener('click', () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=main.8842fc0f07ad4233fd62.js.map
+//# sourceMappingURL=main.568e0b507b9c99b2d580.js.map
