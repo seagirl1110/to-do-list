@@ -13,6 +13,6 @@ module.exports = {
   rules: {
   },
   ignorePatterns: [
-    "dist"
+    'dist',
   ],
 };
