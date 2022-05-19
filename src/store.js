@@ -1,4 +1,4 @@
-const todoColl = JSON.parse(localStorage.getItem('todo'));
+const todoColl = JSON.parse(localStorage.getItem('todo')) || [];
 
 const sortTodoColl = () => {
   todoColl.sort((a, b) => {
